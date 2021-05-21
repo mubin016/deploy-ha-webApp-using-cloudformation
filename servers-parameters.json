@@ -1,0 +1,13 @@
+[{
+        "ParameterKey": "EnvironmentName",
+        "ParameterValue": "UdacityTaifurIAC"
+    },
+    {
+        "ParameterKey": "ServerAMIId",
+        "ParameterValue": "ami-0747bdcabd34c712a"
+    },
+    {
+        "ParameterKey": "InstanceType",
+        "ParameterValue": "t3.medium"
+    }
+]
