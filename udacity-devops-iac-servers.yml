@@ -44,10 +44,7 @@ Resources:
                   FromPort: 80
                   ToPort: 80
                   CidrIp: 0.0.0.0/0
-                - IpProtocol: tcp
-                  FromPort: 22
-                  ToPort: 22
-                  CidrIp: 0.0.0.0/0
+             
             SecurityGroupEgress: # Allowing outbound traffic on all ports so that updates or patches can be downloaded.
                 - IpProtocol: tcp
                   FromPort: 0
@@ -107,7 +104,7 @@ Resources:
                     apt-get install apache2 -y
                     systemctl start apache2.service
                     cd /var/www/html
-                    aws s3 cp s3://udacity-cloudfront-practice/icassp_voip_final.pdf .
+                    aws s3 cp s3://udacity-cloudfront-practice/index.html .
             ImageId: !Ref ServerAMIId
             IamInstanceProfile: !Ref S3BucketsInstanceProfile
             SecurityGroups:
